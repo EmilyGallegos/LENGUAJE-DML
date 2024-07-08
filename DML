@@ -1,0 +1,28 @@
+--CREAR LA TABLA "libros"
+
+create table libros (id_libro int not null,
+                    nombre_libro varchar(45),
+		     cantidad_paginas int);
+
+
+-- Insertar datos
+insert into libros ('id_libro','nombre_libro','cantidad_paginas')
+values (1,"Cien Anios de soledad",1000);
+
+insert into libros values (2,"El coronel no tiene quien le escriba",500);	
+
+--Mostrar los datos en la tabla
+
+SELECT * FROM `libros`;
+
+--Modificar el campo "cantidad_paginas" para los datos.
+update libros set cantidad_paginas=100;
+
+--Modicar el campo "cantida_paginas" para un dato en específico,
+update libros set cantida_paginas = 200 where id_libro = 2;
+
+--Eliminar un dato
+delete from libros where id_libro=1;
+
+--Eliminar la tabla
+delete from libros;
